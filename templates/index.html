@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat SQL Bot</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="icon" href="static/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+        <p class="loading-text">Carregando resposta...</p>
+    </div>
+
+    <div class="container">
+        <h1>Chat SQL Bot</h1>
+
+        <div class="input-area">
+            <textarea id="pergunta" rows="4" placeholder="Digite sua pergunta sobre SQL..."></textarea>
+            <button id="enviarBtn" onclick="enviarPergunta()">🔍 Consultar</button>
+        </div>
+
+
+        <div class="output">
+            <h2>Resultados:</h2>
+            <hr />
+            <div class="download-container" id="downloadContainer">
+                <button id="download-btn" onclick="baixarExcel()">⬇️ Baixar Excel</button>
+            </div>
+            <hr />
+            <div class="tabela-container">
+                <div id="resultados"></div>
+            </div>
+
+            <div class="feedback-container" id="feedbackContainer" style="display:none;">
+                <h2>O modelo acertou a pergunta?</h2>
+                <div class="feedback-buttons">
+                    <button class="feedback-btn yes" onclick="enviarFeedback('sim')">Sim 👍</button>
+                    <button class="feedback-btn no" onclick="enviarFeedback('não')">Não 👎</button>
+                </div>
+                <p id="feedbackMessage" style="margin-top: 10px;"></p>
+            </div>
+
+        </div>
+    </div>
+    <script src="../static/script.js"></script>
+</body>
+</html>

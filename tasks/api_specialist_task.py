@@ -24,7 +24,7 @@ class ApiSpecialistTask(Task):
             f"Pergunta: {self._question}\n"
             f"Endpoints disponíveis: {self._endpoints_dict}\n"
             "A partir desses dados, qual endpoint deve ser usados?"
-            "Retorne a route, o method e o payload se houver! Uma coisa muito importante é que esses dados estejam entre os blocos ```route: * ```, ```method: * ``` e ```payload: * ``` "
+            "Retorne a route, o method e o payload se houver! Uma coisa muito importante é que esses dados estejam entre os blocos ```route: * ```, ```method: * ``` e ```payload: * ```, converta o payload em json!"
         )
         
         decision = self.agent.llm.call(prompt)

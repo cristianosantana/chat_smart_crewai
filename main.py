@@ -21,4 +21,4 @@ if __name__ == "__main__":
     }
     workflow = ResearchWorkflow(question, dicionario)
     result = workflow.execute()
-    print("Resultado da pesquisa:", result)
+    # print("Resultado da pesquisa:", result)

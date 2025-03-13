@@ -13,6 +13,6 @@ class ApiSpecialist(Agent):
             allow_delegation=True,
             llm = LLM(
                 model="groq/deepseek-r1-distill-llama-70b",
-                temperature=1
+                temperature=0.7
             )
         )

@@ -7,7 +7,7 @@ class ResearchWorkflow:
 
     def execute(self):
         response = self.team.run()
-        print(response)
+        # print(response)
         return self.run_external_api(os.getenv('BASE_URL'), response['method'], response['route'], response['payload'])
     
     def run_external_api(self, base_url, method, route, payload):

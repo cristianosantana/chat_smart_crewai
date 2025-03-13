@@ -10,6 +10,7 @@ dicionario = {
     "comissoesPorConcessionariaPeriodo" : { "route": "chat_ai/relatorio/comissoes_por_concessionaria_periodo", "method": "POST", "payload": {"data_inicio": "Y-mm-d 01:00:00", "data_final": "Y-mm-d 23:59:00"} },
     "vendasServicosPorPeriodo" : { "route": "chat_ai/relatorio/vendas_servicos_por_periodo", "method": "POST", "payload": {"data_inicio": "Y-mm-d 01:00:00", "data_final": "Y-mm-d 23:59:00"} },
     "notasFiscaisEmitidasPorEmpresasMes" : { "route": "chat_ai/relatorio/notas_fiscais_emitidas_por_empresas_mes", "method": "POST", "payload": { "month": "m", "year": "Y"} },
+    "faturamentoCortesiasPorMesAno" : { "route": "chat_ai/relatorio/faturamento_cortesias_por_mes_ano", "method": "POST", "payload": { "month": "m", "year": "Y"} },
 }
 
 @bp.route('/')
@@ -27,7 +28,7 @@ def pergunta():
     
     workflow = ResearchWorkflow(pergunta, dicionario) # Instancia o ResearchWorkflow com a pergunta e o dicionário
     resultado_pesquisa = workflow.execute() # Executa o workflow e armazena o resultado
-    print(resultado_pesquisa)
+    # print(resultado_pesquisa)
     if 'error' in resultado_pesquisa:
         return jsonify(resultado_pesquisa)
     

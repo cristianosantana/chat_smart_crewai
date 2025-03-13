@@ -41,6 +41,8 @@ executing==2.2.0
 fastapi==0.115.11
 fastavro==1.10.0
 filelock==3.17.0
+flask
+flask_limiter
 flatbuffers==25.2.10
 frozenlist==1.5.0
 fsspec==2025.2.0
@@ -75,7 +77,7 @@ idna==3.10
 importlib_metadata==8.5.0
 importlib_resources==6.5.2
 instructor==1.7.2
-ipython==9.0.1
+ipython
 ipython_pygments_lexers==1.1.1
 jedi==0.19.2
 Jinja2==3.1.5

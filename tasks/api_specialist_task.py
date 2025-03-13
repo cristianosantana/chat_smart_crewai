@@ -11,7 +11,14 @@ class ApiSpecialistTask(Task):
     def __init__(self, question, endpoints_dict, **kwargs):
         api_specialist = ApiSpecialist()
         super().__init__(
-            description=f"Dada a pergunta: '{question}', analise o dicionário de endpoints e identifique qual(is) endpoint(s) utilizar para obter os dados necessários.",
+            description=f"""
+                1. Dada a pergunta: '{question}', analise o dicionário de endpoints e identifique qual(is) endpoint(s) utilizar para obter os dados requisitados implicitamente na pergunta.
+                2. O termo 'os' quer dizer Ordem de Serviço!
+                2. Termos que devem ser considerados para montar o payload dos endpoint(s): 
+                    1. Tipo de 'os': [("os_tipo_id": "1"  "descrição": "Venda Normal"), ("os_tipo_id": "2"  "descrição": "Financiamento"),
+                       ("os_tipo_id": "3"  "descrição": "Cortesia Concessionária"), ("os_tipo_id": "4"  "descrição": "Cortesia Funcionário"), ("os_tipo_id": "5"  "descrição": "Prestação de Serviços")];
+                    2. os_status: 'ABERTA', 'FECHADA', 'FINALIZADA'
+            """,
             agent=api_specialist,
             expected_output="Uma resposta objetiva contendo o(s) endpoint(s) mais relevante!",
             **kwargs

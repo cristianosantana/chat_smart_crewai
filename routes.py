@@ -6,7 +6,7 @@ bp = Blueprint('main', __name__)
 treat_responses = TreatResponses()
 dicionario = {
     "getVendasPorTipoPagamento" : { "route": "admin/relatorio-financeiro/vendedor/vendas-por-tipo-pagamento", "method": "POST", "payload": {} },
-    "getOsPendentes" : { "route": "admin/relatorio-financeiro/vendas_pendentes_pagamento", "method": "POST", "payload": { "os_tipo_id": 2, "os_status": "FECHADA" } },
+    "getOsPendentes" : { "route": "admin/relatorio-financeiro/vendas_pendentes_pagamento", "method": "POST", "payload": { "os_tipo_id": int, "os_status": str } },
     "comissoesPorConcessionariaPeriodo" : { "route": "chat_ai/relatorio/comissoes_por_concessionaria_periodo", "method": "POST", "payload": {"data_inicio": "Y-mm-d 01:00:00", "data_final": "Y-mm-d 23:59:00"} },
     "vendasServicosPorPeriodo" : { "route": "chat_ai/relatorio/vendas_servicos_por_periodo", "method": "POST", "payload": {"data_inicio": "Y-mm-d 01:00:00", "data_final": "Y-mm-d 23:59:00"} },
     "notasFiscaisEmitidasPorEmpresasMes" : { "route": "chat_ai/relatorio/notas_fiscais_emitidas_por_empresas_mes", "method": "POST", "payload": { "month": "m", "year": "Y"} },

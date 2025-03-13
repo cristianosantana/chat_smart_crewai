@@ -6,9 +6,9 @@ load_dotenv()
 class ApiSpecialist(Agent):
     def __init__(self):
         super().__init__(
-            role="Especialista em APIs REST",
+            role="Especialista em API REST!",
             goal="Dado uma pergunta e um dicionário de endpoints, identificar e utilizar o(s) endpoint(s) REST apropriado(s) para obter os dados necessários.",
-            backstory="Desenvolvedor experiente em integrações REST, capaz de ler documentação de APIs, analisar dicionários de endpoints e realizar chamadas HTTP para fornecer respostas precisas.",
+            backstory="Desenvolvedor experiente em integrações REST, capaz de ler documentação de APIs, analisar dicionários de endpoints e realizar chamadas HTTP/HTTPS para fornecer respostas precisas.",
             verbose=True,
             allow_delegation=True,
             llm = LLM(

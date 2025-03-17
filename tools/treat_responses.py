@@ -1,3 +1,5 @@
+import random
+
 class TreatResponses():
     
     def generate_html_table_os_pending(self, dados):
@@ -48,3 +50,17 @@ class TreatResponses():
 
         html += "</table>"
         return html
+    
+
+    def simple_random_sample(self, data, sample_size):
+        """
+        Seleciona uma amostra aleatória simples de um array de objetos.
+
+        Args:
+            data: O array de objetos (dicionários).
+            sample_size: O tamanho desejado da amostra.
+
+        Returns:
+            Uma lista contendo a amostra aleatória.
+        """
+        return random.sample(data, sample_size)

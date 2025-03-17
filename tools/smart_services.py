@@ -54,4 +54,5 @@ class SmartServices:
         """
         response = self.run_external_api(os.getenv('BASE_URL'), "POST", "auth", """{"login": "cristiano.santana","password": "29102018"}""")
         self.user_token = response.get("token")
-        print(f"Usuário logado: " . response.get("usuario").login)
+        user_name = response.get("usuario")['login']
+        print(f"Usuário logado: {user_name}")
